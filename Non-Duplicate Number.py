@@ -16,13 +16,13 @@
 # Challenge: Find a way to do this using O(1) memory.
 
 def singleNumber(nums):
-    nums.sort()
-    _ = 0
-    while _ < len(nums) - 1:
-        if nums[_] == nums[_+1]:
-            _ = _ + 2
-        else:
-            return nums[_]
-    return nums[-1]
+	nums.sort()
+	i = 0
+	while i < len(nums) - 1:
+		if nums[i] == nums[i+1]:
+			i = i + 2
+		else:
+			return nums[i]
+	return nums[-1]
 
 print(singleNumber([4, 3, 2, 4, 1, 3, 2]))
